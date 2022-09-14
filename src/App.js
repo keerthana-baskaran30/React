@@ -1,6 +1,8 @@
 import React from 'react';
 import Function1,{Function2} from './components/Functional';
-import Class from './components/Class';
+import Class, { ClassProps } from './components/Class';
+import Counter from './components/Counter';
+import Event, { EventClass } from './components/Eventhandling';
 
 class App extends React.Component{
     render(){
@@ -8,10 +10,17 @@ class App extends React.Component{
             <div>
                 <h1>Hi</h1>
                 <Function1 name= 'Kiki'/>
-                <Class/>
-                <Function2/>
                 <Function1 name= 'Keerthana'/>
-                <Function1/>
+                <Function1>This is function closing</Function1>
+                <Function2/>
+                <Class name="jelly"/>
+                <ClassProps name= 'joey'>This is Class Props  </ClassProps>
+                <ClassProps/>
+                <Counter/>
+                <Event/>
+                <EventClass/>
+                
+                
             </div>
         )
     }
