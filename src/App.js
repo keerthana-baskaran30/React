@@ -2,7 +2,8 @@ import React from 'react';
 import Function1,{Function2} from './components/Functional';
 import Class, { ClassProps } from './components/Class';
 import Counter from './components/Counter';
-import Event, { EventClass } from './components/Eventhandling';
+import Event, { ClassEvent, EventClass } from './components/Eventhandling';
+
 
 class App extends React.Component{
     render(){
@@ -19,6 +20,8 @@ class App extends React.Component{
                 <Counter/>
                 <Event/>
                 <EventClass/>
+                {/* <ClassEvent/> */}
+               
                 
                 
             </div>

@@ -10,6 +10,7 @@ function Function1(props) {
         <>
             <h1>Hello {props.name}</h1>
             {props.children} 
+            <Function2/>
         </>
 
     )

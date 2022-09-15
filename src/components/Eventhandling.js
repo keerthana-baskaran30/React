@@ -22,4 +22,30 @@ export class EventClass extends React.Component{
         )
     }
 }
+
+// export class ClassEvent extends React.Component{
+//     constructor(){
+//         super()
+//         this.state = {
+//             message : "Hie"
+//         }
+//         this.buttonHandler = this.buttonHandler.bind(this);
+//     }
+
+//     buttonHandler(){
+//         this.setState = (
+//             () => { message = "button handler"}
+//         )
+//         console.log(this.state.message)
+//     }
+
+//     render(){
+//         return(
+//             <div>
+//                 {this.state.message}
+//                 <button onClick={this.buttonHandler}>Button</button>
+//             </div>
+//         )
+//     }
+// }
 export default Event;

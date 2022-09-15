@@ -11,12 +11,16 @@ class Counter extends React.Component {
     }
 
     counter(event){
-        if (this.state.count == ""){
-            this.setState({count:"clicked"})
-        }
-        else{
-            this.setState({count:""})
-        }
+        // conditional if
+        // if (this.state.count == ""){
+        //     this.setState({count:"clicked"})
+        // }
+        // else{
+        //     this.setState({count:""})
+        // }
+
+        // ternary 
+        this.state.count =="" ? this.setState({count:"clicked"}): this.setState({count:""})
         
     }
 
@@ -24,8 +28,8 @@ class Counter extends React.Component {
         return (
             <>
                 <p>{this.state.count}</p>
-                {/* <button onClick = {(event)=>this.counter(event)}>Counter {this.state.count}</button> */}
-                <button onClick={this.counter}>click me</button>
+                <button onClick = {(event)=>this.counter(event)}>Counter {this.state.count}</button>
+                {/* <button onClick={this.counter}>click me</button> */}
             </>
 
         )

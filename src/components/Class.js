@@ -16,6 +16,7 @@ class Class extends React.Component {
                 <h1>this is another tag in class component</h1>
                 <b>{this.props.name} - {this.state.statevariable}</b>
                 <b>Destructuring {value} </b>
+                <ClassProps/>
             </>
 
         )
