@@ -1,18 +1,44 @@
 import React from 'react'
+// import Child, { ChildClass } from './Child'
+import Child from './Child'
 
-class Parent extends React.Component{
+// export default function Parent(props){
+//     const parentobj = {
+//         animal :"cat",
+//         pet: "yes"
+//     }
+//     const parentfunction = (parameter) =>{
+//         return <i>{parentobj.animal},{parameter}</i>
+//     }
 
-    onclickHandler(){
-        return <p>this is cjcd</p>
+//     return(
+//         <div>
+//             {/* <p>{props.prop.id}-{props.prop.name}-{props.subfunction()}</p> */}
+//             <Child  parentfunction={parentfunction} />
+            
+//         </div>
+//     )
+// }
+
+
+export class ParentClass extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+            message : "Hello world"
+        }
     }
 
+    parentMethod = () =>{
+        this.setState({message : "hi"})
+        console.log("changed")
+
+    }
     render(){
         return(
             <div>
-                inside parent
+                <ChildClass message= {this.state.message} parentMethod={this.parentMethod}/>
             </div>
         )
     }
 }
-
-export default Parent

@@ -7,29 +7,56 @@ import Lists,{ObjectList} from './components/Lists'
 import Form from './components/Form'
 import Mount from './components/Mounting';
 import Updating from './components/Updating';
+import Calculator from './components/Lifting'
+import Child from './components/Child';
+import ComponentProps,{Contacts,Chat} from './components/ComponentProps';
+import Inheritance,{ChildOne,ChildTwo} from './components/Inheritance';
+import Parent,{ParentClass} from './components/Parent';
+import Refs from './components/Refs';
+import Pure from './components/Pure'
+import Context,{ComponentA,ComponentB} from './components/Context';
+import  Ancestor  from './components/UpLift';
+
+export const ContextObject = React.createContext()
 
 class App extends React.Component{
     render(){
         return (
             <div>
                 <h1>Hi</h1>
-                {/* <Function1 name= 'Kiki'/>
-                <Function1 name= 'Keerthana'/>
-                <Function1>This is function closing</Function1>
-                <Function2/>
-                <Class name="jelly"/>
-                <ClassProps name= 'joey'>This is Class Props  </ClassProps>
-                <ClassProps/>
-                <Counter/>
-                <Event/>
-                <EventClass/> */}
-                {/* <ClassEvent/> */}
-                {/* <Lists/>
-                <ObjectList/> */}
-                {/* <Form/> */}
+                {/* <Function1 name= 'Kiki'/> */}
+                {/* <Function1 name= 'Keerthana'/> */}
+                {/* <Function1>This is function closing</Function1> */}
+                {/* <Function2/> */}
+                {/* <Class name="jelly"/> */}
+                {/* <ClassProps name= 'joey'>This is Class Props  </ClassProps> */}
+                {/* <ClassProps/> */}
+                {/* <Counter/> */}
+                {/* <Event/> */}
+                {/* <EventClass/> */}
+                {/* <Lists/> */}
+                {/* <ObjectList/> */}
+                {/* <Form formname = "FORM1"/> */}
                 {/* <Mount/> */}
-                <Updating/>
-               
+                {/* <Updating/> */}
+                {/* <Calculator prop = {"dcm"}>cdcd</Calculator> */}
+                {/* <Child/> */}
+                {/* <Parent/> */}
+                {/* <ComponentProps left={<Contacts/>} right={<Chat/>} /> */}
+                {/* <Inheritance/>
+                <ChildOne/>
+                <ChildTwo/> */}
+                {/* <Refs/> */}
+                {/* <ParentClass/> */}
+                {/* <Pure/> */}
+
+                <ContextObject.Provider value="context value">
+                    <Context/>
+                </ContextObject.Provider>
+
+                {/* <Ancestor/> */}
+
+                
                 
                 
             </div>

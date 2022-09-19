@@ -17,6 +17,8 @@ class Updating extends React.Component{
         return null
     }
 
+    //will always return true in regular component whereas in pure component it will compare the prev and current state
+    // if changes it will return true else false 
     shouldComponentUpdate(Props,state){
         console.log("shouldcomponent update")
         return true
