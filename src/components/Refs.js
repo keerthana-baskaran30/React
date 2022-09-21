@@ -1,27 +1,39 @@
 import React from "react";
 
-class Refs extends React.Component {  
-    constructor(props) {  
-      super(props);  
-      this.callRef = React.createRef();  
-      
-    }  
-
-    componentDidMount(){
-      if(this.cbRef){
-        console.log(this.cbRef.value)
-      }
-    }
-    
-    refFunc = ()=>{
-        console.log(this.callRef.current.type)
-        console.log(this.callRef.current.value)
+class Refs extends React.Component {
+  constructor(props) {
+    super(props);
+    this.callRef = React.createRef();
+    this.cbRef = null
+    this.setRef = (element)=>{
+      this.cbRef=element
     }
 
-    render() {  
-     
-      return <input  type="text" ref={this.callRef} onChange={this.refFunc} />  ;  
-    }  
-  }  
-  
+  }
+
+  componentDidMount() {
+    console.log(this.callRef) // current object
+    if (this.cbRef){
+      this.refFunc()
+    }
+
+  }
+
+  refFunc = () => {
+    // console.log(this.callRef.current.type)
+    // console.log(this.callRef.current.value)
+    console.log(this.cbRef.value) //call back approach
+  }
+
+  render() {
+
+    return (
+      <>
+        {/* <input type="text" ref={this.callRef} onChange={this.refFunc} /> */}
+        <input type="text" ref={this.setRef} onChange={this.refFunc} />
+      </>
+    )
+  }
+}
+
 export default Refs
