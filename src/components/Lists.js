@@ -4,7 +4,7 @@ function Lists(props){
     // const names = ['jio' , 'lenna', 'piou']
     return (
         // <div>
-        //     {names.map(name => <div><b>{name}</b></div>)}
+        //     {names.map(name => <div><b>{name}</b></div>)}        
         // </div>
         <div>
             {props.obj.map(object => <p key={object.name}>{object.name} - {object.age}</p>)}

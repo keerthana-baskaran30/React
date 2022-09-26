@@ -16,14 +16,17 @@ import Refs from './components/Refs';
 import Pure from './components/Pure'
 import Context, { ComponentA, ComponentB } from './components/Context';
 import Ancestor from './components/UpLift';
-import Error,{CounterError} from './components/Error';
+import Error, { CounterError } from './components/Error';
 import TryCatch from './components/TryCatch';
-import Clicker from './components/Wrapped'           
+import Clicker from './components/Wrapped'
 import Clicker2 from './components/Wrapped2'
 import ClassRef from './components/ClassRef';
 import ClassRefParent from './components/ClassRefParent';
-import Render,{RenderProps} from './components/Render';
+import Render, { RenderProps } from './components/Render';
 import Portals from './components/Portals';
+import HookBasic from './components/HooksBasic';
+import Hook2 from './components/Hook2';
+
 
 export const ContextObject = React.createContext()
 
@@ -33,7 +36,7 @@ class App extends React.Component {
         return (
             <div>
                 <h1>Hi</h1>
-                {/* <Function1 name= 'Kiki'/> */}
+                {/* <Function1 name={90}/> */}
                 {/* <Function1 name= 'Keerthana'/> */}
                 {/* <Function1>This is function closing</Function1> */}
                 {/* <Function2/> */}
@@ -59,9 +62,9 @@ class App extends React.Component {
                 {/* <ParentClass/> */}
                 {/* <Pure/> */}
 
-                {/* <ContextObject.Provider value="context value">
+                <ContextObject.Provider value="context value">
                     <Context/>
-                </ContextObject.Provider> */}
+                </ContextObject.Provider>
 
                 {/* <Ancestor/> */}
 
@@ -71,13 +74,17 @@ class App extends React.Component {
 
                 {/* <TryCatch/> */}
 
-               {/* <Clicker name="kelly" id='3'/> */}
-               {/* <Clicker2/> */}
+                {/* <Clicker name="kelly" id='3'/> */}
+                {/* <Clicker2/> */}
 
-            
+
                 {/* <ClassRefParent/> */}
-                <RenderProps name="jekli"/>
-                <Portals/>
+                {/* <RenderProps name="jekli"/>
+                <Portals/> */}
+
+                {/* <HookBasic value="prosp variable" /> */}
+                {/* <Hook2/> */}
+
 
             </div>
         )

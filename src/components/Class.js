@@ -24,6 +24,12 @@ class Class extends React.Component {
 }
 
 export class ClassProps extends React.Component {
+
+    //another way of declaring defaultprops
+    // static defaultProps = {
+    //     name: 'stranger'
+    // }
+
     constructor(props){
         super(props)
         console.log(props) // Returns an empty object if props are not passed

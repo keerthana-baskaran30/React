@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { ContextObject } from '../App';
 
 
@@ -23,12 +23,16 @@ export function ComponentA() {
 }
 
 export function ComponentB() {
+    const name = useContext(ContextObject)
     return (
-        <ContextObject.Consumer>
-            {
-                (name) => <h1>{name}</h1>
-            }
-        </ContextObject.Consumer>
+        <p> {name} </p> //using hooks - useContext
+       
+        //using react context API
+        // <ContextObject.Consumer>
+        //     {
+        //         (name) => <h1>{name}</h1>
+        //     }
+        // </ContextObject.Consumer>
 
     )
 }
