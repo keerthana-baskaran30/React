@@ -26,7 +26,8 @@ import Render, { RenderProps } from './components/Render';
 import Portals from './components/Portals';
 import HookBasic from './components/HooksBasic';
 import Hook2 from './components/Hook2';
-
+import CustomHook, { CustomHook2 } from './components/CustomHook';
+import Reducer from './components/Reducer';
 
 export const ContextObject = React.createContext()
 
@@ -62,9 +63,9 @@ class App extends React.Component {
                 {/* <ParentClass/> */}
                 {/* <Pure/> */}
 
-                <ContextObject.Provider value="context value">
+                {/* <ContextObject.Provider value="context value">
                     <Context/>
-                </ContextObject.Provider>
+                </ContextObject.Provider> */}
 
                 {/* <Ancestor/> */}
 
@@ -84,6 +85,11 @@ class App extends React.Component {
 
                 {/* <HookBasic value="prosp variable" /> */}
                 {/* <Hook2/> */}
+
+                {/* <CustomHook hook={"one"}/>
+                <CustomHook2/> */}
+                <Reducer/>
+
 
 
             </div>

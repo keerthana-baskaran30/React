@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // export default function HooksBasic(props){
 //     //name - state variable
@@ -9,17 +9,13 @@ import React, { useState, useEffect, useCallback } from 'react'
 //     const [name,setName] = useState("default"); //if called without a default value for initial render it will return undefined 
 //     const [value,setValue] = useState(props.value)
 
-//     // console.log(obj)
 //     const changeName = () => {
 //         setName("keerthana");
 //     }
 
 //     useEffect(() => {
-//         console.log("runs after the render and update")
-//         console.log(object)       
+//         console.log("runs after the render and update")     
 //     });
-
-
 //     return (
 //         <>
 //             {/* to access the value directly use {name} */}
