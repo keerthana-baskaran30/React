@@ -28,6 +28,16 @@ import HookBasic from './components/HooksBasic';
 import Hook2 from './components/Hook2';
 import CustomHook, { CustomHook2 } from './components/CustomHook';
 import Reducer from './components/Reducer';
+import UseEffectHook from './components/UseEffectHook'
+import AxiosComponent from './components/AxiosComponent';
+import AxiosExample from './components/AxiosExample';
+import ComponentDidMount from './components/ComponentDidMount'
+import AddAxios from './components/AddAxios';
+
+import { BrowserRouter,Router, Switch, Routes, Route } from 'react-router-dom'
+import Home from './components/Home';
+import About from './components/About';
+
 
 export const ContextObject = React.createContext()
 
@@ -88,10 +98,23 @@ class App extends React.Component {
 
                 {/* <CustomHook hook={"one"}/>
                 <CustomHook2/> */}
-                <Reducer/>
+                {/* <Reducer/> */}
+
+                {/* <UseEffectHook/> */}
+
+                {/* <AxiosExample/> */}
 
 
+                {/* <ComponentDidMount/> */}
+                {/* <AddAxios/> */}
 
+                <Router>
+                    <Routes>
+                        <Route index Path="/" element={<Home />} />
+                        <Route Path="about" element={<About />} />
+                    </Routes>
+                    </Router>
+                
             </div>
         )
     }

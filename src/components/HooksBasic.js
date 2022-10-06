@@ -49,19 +49,20 @@ import React, { useState, useEffect } from 'react'
 //     )
 // }
 
+
+
 export default function HooksBasic() {
     const [object, setObject] = useState({ name: "", id: "" })
     const [list, setList] = useState({})
-    const updateObject = object
+    const [isvalid , setIsvalid] = useState(false)
 
     const changeObject = (event) => {
         setObject({ ...object, [event.target.name]: event.target.value })
-        // console.log(object);
+        console.log(object);        
     }
 
     const submitFun = () => {
-        // console.log(updateObject)
-        setList(() => { return { ...list, [updateObject.id]:updateObject} })
+        setList(() => { return { ...list, [object.id]: object } })
         console.log("ijoio", list)
 
     }
@@ -71,8 +72,9 @@ export default function HooksBasic() {
     // executes the useEffect if at least one of the provided dependencies has changed since the previous run
     //runs only when the dependency array changes
     useEffect (() => {
-        console.log("updating the list")
-    },[list])
+        console.log("updating the list");
+        (object.name.length <10 && object.name !="") ? setIsvalid(true) :setIsvalid(false)    
+    },[object.name])
 
 
     return (
@@ -86,12 +88,12 @@ export default function HooksBasic() {
             <br></br>
             <p>{JSON.stringify(object)}</p>
             <p>{JSON.stringify(list)}</p>
-
+            <p>{isvalid ? "Valid" :"not valid"}</p>
             {/* {Object.keys(list).map((item) => {
             console.log(list[item].name)
             // <p> {list[item].name} - {list.item.id} </p>
             })} */}
-            
+
         </>
     )
 }

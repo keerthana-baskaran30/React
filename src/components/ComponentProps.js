@@ -9,10 +9,13 @@ export function Chat(){
 }
 
 export default function ComponentProps(props) {
+
+    
     return (
-        <div >
+        <div onClick={component}>
             {props.left}
            {props.right}
+           
         </div>
     );
 }

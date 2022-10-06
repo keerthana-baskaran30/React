@@ -1,19 +1,25 @@
 import React, { useReducer } from 'react'
 
-const reducer = (state,action) => {
-    console.log("du")
-    return `state ${state}`
-}
+export default function Reducer() {
+    const [state, dispatch] = useReducer(reducer, 0)
 
-export default function Reducer(){
-    const [state,dispatch] = useReducer(reducer , 0)
-    // console.log("state inside reducer function ",state)
-    // console.log("dispatch ",dispatch)
-    
+    function reducer (state, action) {
+        // return state+action
+
+        if (action===1) {
+            return state+action
+        }
+        else{
+            return state-action
+        }
+
+    }
+
     return (
-        
         <>
-            <p onClick = {dispatch(1)} >hehue</p>
+            <p>{state}</p>
+            <button onClick={() => dispatch(1)}> Add 1 </button>
+            <button onClick = {() => dispatch(2)}>Sub 2</button>
         </>
     )
 }
